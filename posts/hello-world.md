@@ -25,4 +25,4 @@ console.log('Hello, World!');
 
 ## 图片
 
-![image-20250911141315304](/Users/amada/Documents/nanoblade.top/me/blog/blog-content/images/image-20250911141315304.png)
+![image-20250911141315304](https://github.com/tomohikoAmada/blog-content/blob/main/images/image-20250911141315304.png)
