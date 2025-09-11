@@ -21,3 +21,8 @@ draft: false
 
 ```javascript
 console.log('Hello, World!');
+```
+
+## 图片
+
+![image-20250911141315304](/Users/amada/Documents/nanoblade.top/me/blog/blog-content/images/image-20250911141315304.png)
