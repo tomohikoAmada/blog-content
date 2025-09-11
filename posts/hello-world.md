@@ -12,7 +12,7 @@ draft: false
 
 ## 功能特性
 
-- ✅ Markdown 支持
+- ✅ Markdown 支持22222
 - ✅ 代码高亮
 - ✅ 图片支持
 - ✅ 标签和分类
