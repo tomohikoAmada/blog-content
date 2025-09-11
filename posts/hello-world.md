@@ -1,8 +1,8 @@
 ---
-title: "Hello World"
+title: Hello World
 date: 2025-01-10
-category: "技术" 
-tags: ["Firebase", "Vue", "博客"]
+category: 技术
+tags: [Firebase, Vue, 博客]
 draft: false
 ---
 
