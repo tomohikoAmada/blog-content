@@ -1,3 +1,10 @@
+---
+title: COLAB YOLOV5 训练 调优
+date: 2025-09-12
+category: 技术
+tags: [YOLOV5, training, GCP, COLAB]
+draft: false
+---
 # COLAB 训练 调优 YOLOV5
 
 ## 本地测试
