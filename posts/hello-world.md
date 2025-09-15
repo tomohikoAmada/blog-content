@@ -10,6 +10,9 @@ draft: false
 
 欢迎来到我的博客！
 
+1. 1
+
+
 ## 功能特性
 
 * ✅ Markdown 支持
