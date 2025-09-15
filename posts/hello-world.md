@@ -1,21 +1,21 @@
 ---
-title: Hello World
-date: 2025-01-10
-category: 技术
-tags: [Firebase, Vue, 博客]
+title: "Hello World"
+date: 2025-09-15
+category: "技术"
+tags: ["Firebase", "Vue", "博客"]
 draft: false
 ---
 
-# Hello World
+# Hello World修改了一下
 
 欢迎来到我的博客！
 
 ## 功能特性
 
-- ✅ Markdown 支持22222
-- ✅ 代码高亮
-- ✅ 图片支持
-- ✅ 标签和分类
+* ✅ Markdown 支持22222
+* ✅ 代码高亮
+* ✅ 图片支持
+* ✅ 标签和分类
 
 ## 代码示例
 
@@ -24,7 +24,7 @@ console.log('Hello, World!');
 ```
 
 ## 图片
-![image-20250911141315304](https://raw.githubusercontent.com/tomohikoAmada/blog-content/main/images/image-20250911141315304.png)
 
+![image-20250911141315304](/api/getImage?path=image-20250911141315304.png)
 
-![image-20250911141315304](https://raw.githubusercontent.com/tomohikoAmada/blog-content/main/images/image-20250911141315304.png)
+![image-20250911141315304](/api/getImage?path=image-20250911141315304.png)
