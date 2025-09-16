@@ -85,4 +85,20 @@ cp -r ~/.config ~/system_backup/
     * 选择"USB闪存驱动器"
     * 等待制作完成(可能需要20-30分钟)
 
+### 4\. 准备分区空间
+
+```
+# 安装分区工具
+sudo apt update
+sudo apt install gparted
+
+
+# 关闭swap分区(为了安全调整分区)
+sudo swapoff -a
+
+
+# 启动分区工具
+sudo gparted
+```
+
 
