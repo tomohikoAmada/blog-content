@@ -84,3 +84,5 @@ cp -r ~/.config ~/system_backup/
     * 版本选择默认的"Windows 11"
     * 选择"USB闪存驱动器"
     * 等待制作完成(可能需要20-30分钟)
+
+
