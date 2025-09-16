@@ -70,3 +70,5 @@ cp -r ~/Pictures ~/system_backup/
 cp -r ~/Downloads ~/system_backup/
 cp -r ~/.config ~/system_backup/
 ```
+
+
