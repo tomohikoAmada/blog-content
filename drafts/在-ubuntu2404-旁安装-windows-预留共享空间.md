@@ -45,3 +45,28 @@ sudo efibootmgr -v
 
 在开始任何操作前,必须做好备份:
 
+```
+# 创建一个备份文件夹
+mkdir ~/system_backup
+
+
+# 备份已安装的软件列表
+dpkg --get-selections > ~/system_backup/installed-software.txt
+
+
+# 备份GRUB配置
+sudo cp /etc/default/grub ~/system_backup/grub_backup
+sudo cp -r /etc/grub.d ~/system_backup/grub.d_backup
+
+
+# 备份当前分区表
+sudo fdisk -l > ~/system_backup/partition_info.txt
+sudo sfdisk -d /dev/sda > ~/system_backup/partition_table_backup.txt
+
+
+# 备份重要的个人文件(根据需要修改路径)
+cp -r ~/Documents ~/system_backup/
+cp -r ~/Pictures ~/system_backup/
+cp -r ~/Downloads ~/system_backup/
+cp -r ~/.config ~/system_backup/
+```
