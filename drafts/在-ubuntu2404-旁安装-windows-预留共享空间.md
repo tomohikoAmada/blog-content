@@ -16,3 +16,32 @@ draft: true
 
 首先确认当前系统的关键信息:
 
+```bash
+# 检查系统启动模式(UEFI还是Legacy)
+[ -d /sys/firmware/efi ] && echo "UEFI" || echo "Legacy"
+
+
+# 查看磁盘分区情况
+lsblk
+
+
+# 查看硬盘剩余空间
+df -h
+
+
+# 详细记录分区信息，包含分区UUID和文件系统类型
+sudo lsblk -f > ~/system_backup/partition_details.txt
+
+
+# 记录完整的分区表布局
+sudo fdisk -l > ~/system_backup/partition_layout.txt
+
+
+# 查看EFI启动项(如果是UEFI系统)
+sudo efibootmgr -v
+```
+
+### 2\. 重要数据备份
+
+在开始任何操作前,必须做好备份:
+
