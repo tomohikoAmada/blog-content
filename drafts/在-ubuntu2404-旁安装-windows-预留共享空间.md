@@ -263,3 +263,29 @@ sudo umount /mnt
 # 在Ubuntu中执行
 timedatectl set-local-rtc 1
 ```
+
+### 11\. 最终检查
+
+1. 重启电脑
+2. 应该能看到GRUB启动菜单,包含:
+    * Ubuntu
+    * Ubuntu高级选项
+    * Windows Boot Manager
+3. 分别进入两个系统,检查是否都能正常启动
+
+## 常见问题解决
+
+1. 如果看不到GRUB菜单:
+    * 重启时按住Shift键
+    * 或者按ESC键
+2. 如果进不去Windows:
+    * 在GRUB菜单选择Windows
+    * 按'e'键
+    * 找到'set root='这一行
+    * 确认分区号是否正确
+3. 如果时间不同步:
+    * 在Windows中执行管理员命令行:
+
+        ```
+        Reg add HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation /v RealTimeIsUniversal /t REG_DWORD /d 1
+        ```
