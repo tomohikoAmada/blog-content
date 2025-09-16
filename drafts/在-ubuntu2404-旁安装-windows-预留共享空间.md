@@ -71,4 +71,16 @@ cp -r ~/Downloads ~/system_backup/
 cp -r ~/.config ~/system_backup/
 ```
 
+把这些备份文件复制到外部硬盘或U盘中保存。
 
+### 3\. 准备Windows安装U盘
+
+1. 准备一个容量至少16GB的U盘 (会被格式化,请提前备份U盘中的资料)
+2. 在另一台Windows电脑上:
+    * 访问微软官方下载页面: [https://www.microsoft.com/software-download/windows11](https://www.microsoft.com/software-download/windows11)
+    * 下载"Media Creation Tool"
+    * 运行工具,选择"为另一台电脑创建安装介质(U盘、DVD 或 ISO 文件)"
+    * 选择语言:"中文(简体)"
+    * 版本选择默认的"Windows 11"
+    * 选择"USB闪存驱动器"
+    * 等待制作完成(可能需要20-30分钟)
