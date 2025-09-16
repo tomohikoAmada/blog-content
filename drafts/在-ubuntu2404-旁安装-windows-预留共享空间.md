@@ -2,7 +2,7 @@
 title: "在 Ubuntu24.04 旁安装 Windows, 预留共享空间"
 date: 2025-09-16
 category: "教程"
-tags: []
+tags: ["Ubuntu", "Windows"]
 draft: true
 ---
 
