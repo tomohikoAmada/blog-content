@@ -223,4 +223,43 @@ boot-repair
 
 ### 9\. 如果boot\-repair失败\,使用手动修复方式:
 
+```bash
+# 确定Ubuntu安装分区
+sudo fdisk -l
 
+
+# 挂载必要的分区(根据实际分区号修改)
+sudo mount /dev/sda2 /mnt  # Ubuntu根分区
+sudo mount /dev/sda1 /mnt/boot/efi  # EFI分区
+sudo mount --bind /dev /mnt/dev
+sudo mount --bind /proc /mnt/proc
+sudo mount --bind /sys /mnt/sys
+
+
+# 进入chroot环境
+sudo chroot /mnt
+
+
+# 更新并重新安装grub
+update-grub
+grub-install /dev/sda
+
+
+# 退出chroot
+exit
+
+
+# 取消挂载
+sudo umount /mnt/sys
+sudo umount /mnt/proc
+sudo umount /mnt/dev
+sudo umount /mnt/boot/efi
+sudo umount /mnt
+```
+
+### 10\. 系统时间同步修复
+
+```
+# 在Ubuntu中执行
+timedatectl set-local-rtc 1
+```
