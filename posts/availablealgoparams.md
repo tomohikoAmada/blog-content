@@ -1,8 +1,8 @@
 ---
 title: "AvailableAlgoParams"
 date: 2025-09-18
-category: "技术"
-tags: ["Quant", "TWS API"]
+category: "量化交易"
+tags: ["TWS API"]
 draft: false
 ---
 
