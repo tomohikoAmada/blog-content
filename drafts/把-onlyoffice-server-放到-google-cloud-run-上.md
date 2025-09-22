@@ -8,14 +8,11 @@ draft: true
 
 # 把 onlyoffice-server 放到 Google Cloud Run 上
 
-部署步骤
-第1步：填写基本信息
-在刚才的界面中填写：
-服务名称：
-onlyoffice-server
-容器镜像网址：
-onlyoffice/documentserver
-区域：保持 asia-east2 (香港)
+## 部署步骤
+
+填写服务名称：onlyoffice-server
+容器镜像网址：onlyoffice/documentserver
+区域：asia-east2 (香港)
 第2步：配置高级设置
 点击 "容器、卷、网络、安全性" 展开高级配置：
 容器设置：
