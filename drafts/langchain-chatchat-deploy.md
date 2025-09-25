@@ -12,3 +12,5 @@ draft: true
 ![1758804593722-image.png](/api/getImage?path=1758804593722-image.png)
 然后执行 `chatchat init`如下：
 ![1758804711120-image.png](/api/getImage?path=1758804711120-image.png)
+然后执行 `chatchat kb -r`
+
