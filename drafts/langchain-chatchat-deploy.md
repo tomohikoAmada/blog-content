@@ -8,4 +8,5 @@ draft: true
 
 # Langchain-Chatchat Deploy
 
-打开pycharm，配置虚拟环境，首先运行 `pip install langchain-chatchat`
+打开pycharm，配置虚拟环境，首先运行 `pip install langchain-chatchat` 如下：
+
