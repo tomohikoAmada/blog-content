@@ -23,7 +23,7 @@ sed -i '' 's/DEFAULT_LLM_MODEL: text-embedding-3-small/DEFAULT_LLM_MODEL: gpt-3.
 sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embedding-3-small/' model_settings.yaml
 ```
 
-然后修改 `model_settings.yaml `的platform\_name: openai
+然后修改 `model_settings.yaml `的 `platform_name: openai`，把`api_key`
 然后执行 `chatchat kb -r`
 然后让这个库退一个版本，执行`pip install httpx==0.24.1`
 然后运行 `chatchat start -a`
