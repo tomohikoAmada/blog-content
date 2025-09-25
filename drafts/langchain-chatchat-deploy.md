@@ -10,3 +10,4 @@ draft: true
 
 打开pycharm，配置虚拟环境，首先运行 `pip install langchain-chatchat` 如下：
 ![1758804593722-image.png](/api/getImage?path=1758804593722-image.png)
+
