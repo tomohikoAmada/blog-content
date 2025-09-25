@@ -24,6 +24,11 @@ sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embed
 ```
 
 然后修改 `model_settings.yaml`
+
+```
+platform_name: openai
+```
+
 然后执行 `chatchat kb -r`
 然后让这个库退一个版本，执行`pip install httpx==0.24.1`
 然后运行 `chatchat start -a`
