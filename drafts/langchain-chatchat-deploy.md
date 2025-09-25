@@ -27,9 +27,8 @@ sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embed
 
 > 如果用的是别的平台，eg：
 > 修改 `model_settings.yaml`：
-> yaml
 >
-> ```
+> ```yaml
 > # 默认选用的 LLM 名称
 > DEFAULT_LLM_MODEL: qwen-turbo
 > 
