@@ -26,7 +26,9 @@ sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embed
 然后修改 `model_settings.yaml `的 `platform_name: openai`，把`api_key`改成自己的，
 
 > 如果用的是别的平台，eg：
-> 1. **使用阿里云百炼平台**
+>
+> ### 1. **使用阿里云百炼平台**
+>
 > 修改 `model_settings.yaml`：
 >
 > ```yaml
