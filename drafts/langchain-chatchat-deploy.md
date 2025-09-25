@@ -23,4 +23,4 @@ sed -i '' 's/DEFAULT_LLM_MODEL: text-embedding-3-small/DEFAULT_LLM_MODEL: gpt-3.
 sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embedding-3-small/' model_settings.yaml
 ```
 
-然后执行
+然后执行 `chatchat kb -r`
