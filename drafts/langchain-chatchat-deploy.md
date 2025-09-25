@@ -26,6 +26,7 @@ sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embed
 然后修改 `model_settings.yaml `的 `platform_name: openai`，把`api_key`改成自己的，
 
 > 如果用的是别的平台，eg：
+> 1. **使用阿里云百炼平台**
 > 修改 `model_settings.yaml`：
 >
 > ```yaml
@@ -51,6 +52,26 @@ sed -i '' 's/DEFAULT_EMBEDDING_MODEL: bge-m3/DEFAULT_EMBEDDING_MODEL: text-embed
 >     embed_models:
 >       - text-embedding-v1
 >       - text-embedding-v2
+> ```
+>
+> ### 2. **使用通义千问开放平台**
+>
+> ```yaml
+> MODEL_PLATFORMS:
+>   - platform_name: qwen
+>     platform_type: openai
+>     api_base_url: https://dashscope.aliyuncs.com/compatible-mode/v1
+>     api_key: your-dashscope-api-key
+>     api_proxy: ''
+>     api_concurrencies: 5
+>     auto_detect_model: false
+>     llm_models:
+>       - qwen-turbo
+>       - qwen-plus
+>       - qwen-max
+>       - qwen-long
+>     embed_models:
+>       - text-embedding-v1
 > ```
 
 然后执行 `chatchat kb -r`
