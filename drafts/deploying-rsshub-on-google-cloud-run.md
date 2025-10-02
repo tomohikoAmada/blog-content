@@ -2,7 +2,7 @@
 title: "Deploying RSSHub on Google Cloud Run"
 date: 2025-10-02
 category: "技术"
-tags: ["RSSHub"]
+tags: ["RSSHub", "Google Cloud Run", "Docker", "GCP", "Cloud", "Serverless"]
 draft: true
 ---
 
