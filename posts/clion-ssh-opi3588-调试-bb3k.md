@@ -10,6 +10,8 @@ draft: false
 
 ## CLion 中设置
 
+### 配置 SSH
+
 1. Settings/Preferences → Build, Execution, Deployment → Toolchains
 2. 添加Remote Host类型的工具链
 3. 配置SSH连接信息（IP、用户名、密码/密钥）
@@ -20,6 +22,48 @@ draft: false
 - Settings → Build, Execution, Deployment → CMake
 - 选择刚才创建的远程工具链
 - 配置Build目录（可以是远程路径）
+
+### VSCode RemoteSSH Like：Full Remote Development in CLion
+
+这是最接近VSCode Remote SSH的体验
+
+1. **File → Remote Development → SSH**
+2. 配置SSH连接
+3. 选择远程项目目录
+4. CLion会：
+   - 在远程机器上安装IDE后端
+   - 直接在远程打开项目
+   - 本地显示完整的远程文件树
+   - 所有操作都在远程执行
+
+
+
+连接成功后，CLion会让你选择远程项目目录：
+
+**如果是新项目：**
+
+- 创建文件夹，并输入远程路径，比如 `/home/orangepi/BatixBrain3kDemo`
+- 或者点击浏览按钮选择已存在的目录
+
+
+
+1. 在本地CLion打开项目
+
+2. **Tools → Deployment → Upload to...**
+
+3. 选择你配置的远程服务器
+
+   **在CLion中查看配置：**
+
+   1. **Settings/Preferences → Build, Execution, Deployment → Deployment**
+   2. 查看你配置的服务器，点击它
+   3. 看 **Mappings** 标签页：
+      - **Local path**: 本地项目路径
+      - **Deployment path**: 远程目标路径（相对于Root path, eg. /BatixBrain3kDemo）
+      - **Web path**: 通常不用管
+   4. 看 **Connection** 标签页：
+      - **Root path**: 远程的根目录（比如 `/home/orangepi`）
+      - 最终上传路径 = Root path + Deployment path
 
 
 
@@ -39,16 +83,23 @@ sudo apt install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt install -y gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
                     gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
                     gstreamer1.0-libav gstreamer1.0-tools
+sudo apt install -y libspdlog-dev
 ```
 
 期间遇到 PulseAudio 的客户端配置文件，GStreamer 依赖引发，选择 **N**（或直接按回车使用默认值）
 
-**然后编译：**
+**然后运行 cmake：**
 
 ```bash
-cd /tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build
+cd /BatixBrain3kDemo/build
 rm -rf *
 cmake -DCMAKE_PREFIX_PATH=/usr/lib/aarch64-linux-gnu/cmake/Qt6 ..
+```
+
+**编译：**
+
+```bash
+make -j8
 ```
 
 
@@ -106,6 +157,39 @@ orangepi@orangepi5plus:/tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build$ cmake -DCMAKE
 -- Generating done
 -- Build files have been written to: /tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build
 
+orangepi@orangepi5plus:~/BatixBrain3kDemo/build$ make -j8
+[  4%] Automatic MOC and UIC for target BatixBrain3kDemo
+[ 16%] Automatic MOC and UIC for target test_framegrabber_linux
+[ 16%] Automatic MOC and UIC for target test_framegrabber
+[ 16%] Automatic MOC and UIC for target test_inference
+[ 16%] Built target BatixBrain3kDemo_autogen
+Consolidate compiler generated dependencies of target BatixBrain3kDemo
+[ 16%] Built target test_inference_autogen
+[ 20%] Linking CXX executable BatixBrain3kDemo
+[ 25%] Building CXX object CMakeFiles/test_inference.dir/InferenceEnginePipeLine/test_inference.cpp.o
+[ 33%] Building CXX object CMakeFiles/test_inference.dir/InferenceEnginePipeLine/InferenceEngine.cpp.o
+[ 33%] Building CXX object CMakeFiles/test_inference.dir/test_inference_autogen/mocs_compilation.cpp.o
+[ 33%] Built target test_framegrabber_autogen
+[ 33%] Built target test_framegrabber_linux_autogen
+[ 37%] Building CXX object CMakeFiles/test_framegrabber.dir/test_framegrabber_autogen/mocs_compilation.cpp.o
+[ 45%] Building CXX object CMakeFiles/test_framegrabber.dir/FrameGrabber/test_framegrabber.cpp.o
+[ 45%] Building CXX object CMakeFiles/test_framegrabber.dir/FrameGrabber/ImageConverter.cpp.o
+[ 50%] Building CXX object CMakeFiles/test_framegrabber.dir/FrameGrabber/RealtimeGrabber.cpp.o
+[ 54%] Building CXX object CMakeFiles/test_framegrabber_linux.dir/test_framegrabber_linux_autogen/mocs_compilation.cpp.o
+📦 Copying models directory for BatixBrain3kDemo
+[ 75%] Built target BatixBrain3kDemo
+[ 79%] Building CXX object CMakeFiles/test_framegrabber_linux.dir/FrameGrabber/TestFrameGrabberLinuxEnv.cpp.o
+[ 83%] Building CXX object CMakeFiles/test_framegrabber_linux.dir/FrameGrabber/ImageConverter.cpp.o
+[ 87%] Building CXX object CMakeFiles/test_framegrabber_linux.dir/FrameGrabber/RealtimeGrabber.cpp.o
+[ 91%] Linking CXX executable test_inference
+📦 Copying models directory for test_inference
+[ 91%] Built target test_inference
+[ 95%] Linking CXX executable test_framegrabber
+[100%] Linking CXX executable test_framegrabber_linux
+📦 Copying models directory for test_framegrabber
+[100%] Built target test_framegrabber
+📦 Copying models directory for test_framegrabber_linux
+[100%] Built target test_framegrabber_linux
 ```
 
 
