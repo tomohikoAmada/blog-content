@@ -67,6 +67,10 @@ draft: false
 
 
 
+在新 CLion 窗口中可以打开 CMakeLists.txt 窗口，点击新建配置。之后可以自动跑 CMake 和 编译
+
+
+
 ## 配置环境
 
 ```bash
