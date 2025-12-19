@@ -17,11 +17,9 @@ draft: true
 
 **还可以进行 CMake 配置：**
 
-- Settings → Build, Execution, Deployment → CMake
-- 选择刚才创建的远程工具链
-- 配置Build目录（可以是远程路径）
-
-
+* Settings → Build, Execution, Deployment → CMake
+* 选择刚才创建的远程工具链
+* 配置Build目录（可以是远程路径）
 
 ## 配置环境
 
@@ -50,8 +48,6 @@ cd /tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build
 rm -rf *
 cmake -DCMAKE_PREFIX_PATH=/usr/lib/aarch64-linux-gnu/cmake/Qt6 ..
 ```
-
-
 
 ## 结果
 
@@ -105,9 +101,8 @@ orangepi@orangepi5plus:/tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build$ cmake -DCMAKE
 -- Configuring done
 -- Generating done
 -- Build files have been written to: /tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build
-
 ```
 
-
-
 ## [对话地址](https://claude.ai/share/b65b66e1-2b4b-4751-a702-c1eb2a75af11)
+
+
