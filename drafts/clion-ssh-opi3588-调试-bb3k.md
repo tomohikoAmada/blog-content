@@ -1,12 +1,12 @@
 ---
-title: "CLion ssh OPi3588 调试 BB3K"
+title: "CLion ssh OPi3588 调试 BB3k"
 date: 2025-12-19
 category: "技术"
-tags: ["RK3588", "BB3K"]
+tags: ["RK3588", "BB3k"]
 draft: true
 ---
 
-# CLion ssh OPi3588 调试 BB3K
+# CLion ssh OPi3588 调试 BB3k
 
 ## CLion 中设置
 
