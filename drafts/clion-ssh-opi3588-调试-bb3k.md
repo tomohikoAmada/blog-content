@@ -37,6 +37,7 @@ sudo apt install -y libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev
 sudo apt install -y gstreamer1.0-plugins-base gstreamer1.0-plugins-good \
                     gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly \
                     gstreamer1.0-libav gstreamer1.0-tools
+sudo apt install -y libspdlog-dev
 ```
 
 期间遇到 PulseAudio 的客户端配置文件，GStreamer 依赖引发，选择 **N**（或直接按回车使用默认值）
@@ -103,6 +104,30 @@ orangepi@orangepi5plus:/tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build$ cmake -DCMAKE
 -- Build files have been written to: /tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build
 ```
 
-## [对话地址](https://claude.ai/share/b65b66e1-2b4b-4751-a702-c1eb2a75af11)
+### [对话地址](https://claude.ai/share/b65b66e1-2b4b-4751-a702-c1eb2a75af11)
 
+## 承上启下
 
+接下来要做的是，配置 RK3588 RKNN 工具链。项目用到了rknn\_api，需要安装：
+
+```bash
+# 从Rockchip官方获取RKNN Toolkit2
+# 通常需要从以下地址下载
+# https://github.com/rockchip-linux/rknn-toolkit2
+
+# 或者如果你有本地的runtime库
+sudo apt install -y librockchip-mpp-dev librockchip-vpu-dev
+```
+
+运行显示：
+
+```bash
+orangepi@orangepi5plus:/tmp/tmp.8yOa6izPM8/BatixBrain3kDemo/build$ sudo apt install -y librockchip-mpp-dev librockchip-vpu-dev
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package librockchip-mpp-dev
+E: Unable to locate package librockchip-vpu-dev
+```
+
+**需要查阅文档**
