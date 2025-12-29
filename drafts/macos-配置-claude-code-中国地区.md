@@ -2,7 +2,7 @@
 title: "MacOS 配置 Claude Code 中国地区"
 date: 2025-12-29
 category: "技术"
-tags: ["ClaudeCode"]
+tags: ["Jetbrain", "Claude", "CC"]
 draft: true
 ---
 
@@ -59,53 +59,6 @@ draft: true
     claude auth login
     ```
 
-<br>
-    > 如有失败，尝试清除指纹：
-    >
-    > ```bash
-    > # 1. 清除 Claude Code 的配置和缓存
-    > rm -rf ~/.claude/statsig
-    > rm -rf ~/.claude/.claude-session-*
-    > 
-    > # 2. 清除浏览器 Cookie（在浏览器中操作）
-    > # 访问 chrome://settings/siteData
-    > # 搜索 anthropic.com 并删除所有数据
-    > 
-    > # 3. 重启 Clash Party（完全退出后重新打开）
-    > 
-    > # 4. 重启终端
-    > 
-    > # 5. 再次尝试
-    > claude auth login
-    > ```
-    >
-    > 再重启一切：
-    >
-    > ```bash
-    > # 1. 完全退出 Clash Party
-    > # 2. 重新打开 Clash Party
-    > # 3. 确认连接到美国/欧洲节点
-    > # 4. 重启终端（完全关闭再打开）
-    > ```
-    >
-    > 可以尝试强制 OAuth 模式。有些用户报告通过特定的浏览器设置成功，即尝试使用浏览器模式绕过：
-    >
-    > ```bash
-    > # 设置环境变量强制使用特定认证流程
-    > export ANTHROPIC_AUTH_TYPE="oauth"
-    > 
-    > # 启动
-    > claude auth login
-    > ```
-    >
-    > 测试网络连接：
-    >
-    > ```bash
-    > # 应该返回 200 或 Cloudflare 验证页面
-    > curl -I https://console.anthropic.com
-    > 
-    > # 检查 cf-ray 显示的地区代码（应该是美国/欧洲）
-    > ```
 
 登陆成功，显示：
 
