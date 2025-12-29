@@ -58,7 +58,7 @@ draft: true
     # 再次尝试登录
     claude auth login
     ```
-
+3. 
 
 登陆成功，显示：
 
