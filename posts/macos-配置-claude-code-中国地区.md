@@ -8,6 +8,8 @@ draft: false
 
 # MacOS 配置 Claude Code 中国地区
 
+> [!WARNING]
+> 
 > 以 Jetbrain IDE 为例
 
 ## 准备工作
@@ -59,7 +61,8 @@ draft: false
     claude auth login
     ```
 
-<br>
+    > [!NOTE]
+    > 
     > 如有失败，尝试清除指纹：
     >
     > ```bash
@@ -113,6 +116,7 @@ draft: false
 /login 
   ⎿  Login successful
 ```
+
 
 ![1767018564992-image-20251229221855467.png](/api/getImage?path=1767018564992-image-20251229221855467.png)
 ![1767018533234-image-20251229221915484.png](/api/getImage?path=1767018533234-image-20251229221915484.png)
